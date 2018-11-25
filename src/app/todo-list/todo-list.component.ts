@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import { Todo } from '../todo';
 
 @Component(
@@ -17,9 +17,13 @@ export class TodoListComponent {
   remove: EventEmitter<Todo> = new EventEmitter();
 
   @Output()
+  edit: EventEmitter<Todo> = new EventEmitter();
+
+  @Output()
   toggleComplete: EventEmitter<Todo> = new EventEmitter();
 
   constructor() {
+
   }
 
   onToggleTodoComplete(todo: Todo) {
@@ -28,6 +32,10 @@ export class TodoListComponent {
 
   onRemoveTodo(todo: Todo) {
     this.remove.emit(todo);
+  }
+
+  onEditTodo(todo: Todo) {
+    this.edit.emit(todo);
   }
 
 }

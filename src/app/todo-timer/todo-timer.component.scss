@@ -1,0 +1,50 @@
+svg {
+  display: block;
+  margin: 5px auto;
+  overflow: visible !important;
+}
+
+#loader
+{ fill: #0088cc }
+
+#border
+{ fill: #00517a }
+.button {
+  background: transparent;
+  box-sizing: border-box;
+  width: 0;
+
+  height: 20px;
+  border-color: transparent transparent transparent #34a853;
+  transition: 100ms all ease;
+  cursor: pointer;
+  opacity: 0;
+  // play state
+  border-style: solid;
+  border-width: 10px 0 10px 20px;
+  &.paused {
+    border-style: double;
+    border-width: 0px 0 0px 30px;
+    border-color: transparent transparent transparent #ea4335 !important;
+  }
+  &:hover {
+    opacity: 1;
+    border-color: transparent transparent transparent #34a853;
+  }
+}
+.timer-content{
+  display: block;
+  width: 60%;
+  padding-left: 2.5em;
+  margin-bottom: 16px;
+  button{
+    vertical-align: top;
+  }
+  span{
+    vertical-align: top;
+  }
+  .timer-circle{
+    width: 30px;
+    display: inline-block;
+  }
+}

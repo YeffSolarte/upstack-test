@@ -27,6 +27,17 @@ export class AppComponent implements OnInit {
       );
   }
 
+  onEditTodo(todo) {
+    this.todoDataService
+      .updateTodo(todo)
+      .subscribe(
+        (newTodo) => {
+          const result = this.todos.filter((t) => t.id !== todo.id);
+          this.todos = [...result, newTodo];
+        }
+      );
+  }
+
   onAddTodo(todo) {
     this.todoDataService
       .addTodo(todo)

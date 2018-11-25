@@ -1,0 +1,49 @@
+<html lang="en" class=""><head>
+  <meta charset="UTF-8">
+
+  <style class="cp-pen-styles">svg {
+    display: block;
+    margin: 50px auto;
+    width: 10px;
+    height: 10px;
+  }
+
+
+  #loader
+  { fill: #0088cc }
+
+  #border
+  { fill: #00517a }</style></head><body>
+<svg viewBox="0 0 250 250">
+  <path id="border" transform="translate(125, 125)" d="M 0 0 v -125 A 125 125 1 0 1 38.62712429686842 -118.88206453689419 z"></path>
+  <path id="loader" transform="translate(125, 125) scale(.84)" d="M 0 0 v -125 A 125 125 1 0 1 38.62712429686842 -118.88206453689419 z"></path>
+</svg>
+<script>var loader = document.getElementById('loader'),
+  border = document.getElementById('border'),
+  α = 0,
+  π = Math.PI,
+  t = 10;
+
+(function draw() {
+  α++;
+  α %= 360;
+  var r = α * π / 180,
+    x = Math.sin(r) * 125,
+    y = Math.cos(r) * -125,
+    mid = α > 180 ? 1 : 0,
+    anim = 'M 0 0 v -125 A 125 125 1 ' +
+      mid + ' 1 ' +
+      x + ' ' +
+      y + ' z';
+  //[x,y].forEach(function( d ){
+  //  d = Math.round( d * 1e3 ) / 1e3;
+  //});
+
+  loader.setAttribute('d', anim);
+  border.setAttribute('d', anim);
+
+  setTimeout(draw, t); // Redraw
+})();
+//# sourceURL=pen.js
+</script>
+</body></html>

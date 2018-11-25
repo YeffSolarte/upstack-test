@@ -2,6 +2,8 @@
   "todos": [
     {
       "title": "Hola :D ",
+      "allTime": 1800,
+      "timeSpend": 97,
       "complete": false,
       "id": 1
     }
