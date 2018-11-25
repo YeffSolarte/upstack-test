@@ -4,7 +4,6 @@ export class Todo {
   allTime = 1800;
   timeSpend = 0;
   complete = false;
-
   constructor(values: Object = {}) {
     Object.assign(this, values);
   }

@@ -1,5 +1,5 @@
 <header class="header">
-  <h1>Todos({{ allTimeSpend / 60 | number:'1.0-2'}})</h1>
+  <h1>Todos({{ allTimeSpend / 60 | number:'1.0-0'}})m</h1>
   <input class="new-todo" placeholder="What needs to be done?" autofocus="" [(ngModel)]="newTodo.title"
          (keyup.enter)="addTodo()">
 
