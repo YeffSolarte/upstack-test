@@ -3,9 +3,23 @@
     {
       "title": "Hola",
       "allTime": 1800,
-      "timeSpend": 283,
+      "timeSpend": 286,
       "complete": false,
       "id": 1
+    },
+    {
+      "title": "asdasdasd",
+      "allTime": 1800,
+      "timeSpend": 163,
+      "complete": false,
+      "id": 2
+    },
+    {
+      "title": "this is a new task",
+      "allTime": 1800,
+      "timeSpend": 5,
+      "complete": false,
+      "id": 3
     }
   ]
 }
